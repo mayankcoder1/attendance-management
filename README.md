@@ -1,27 +1,67 @@
-# AttendanceManagement
+# Attendance Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+## Overview
 
-## Development server
+The **Attendance Management System** is a web application designed to streamline employee attendance tracking. It allows staff to log in, capture their photos for attendance with timestamps, and submit them. Managers can view, edit, and manage this data through a professional dashboard.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **User Authentication:** Unique credentials for staff and managers.
+- **Staff Portal:**
+  - View personal name and shift details.
+  - Capture photo for attendance using the webcam.
+  - Submit attendance with timestamp.
+- **Manager Dashboard:**
+  - View all attendance records with staff photos, timestamps, and attendance status.
+  - Add, edit, and delete staff from the roster.
+  - Deleting a staff entry also removes their attendance records.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technology Stack
 
-## Build
+- **Frontend:** Angular 14
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation and Setup
 
-## Running unit tests
+### Frontend Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Navigate to the frontend folder and install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+2. Run in new terminal  npx json-server --watch db.json --port 3000
+   to run the server 
 
-## Running end-to-end tests
+3. Run the Angular development server:
+   ```bash
+   ng serve
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Open the application in your browser at `http://localhost:4200`.
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Staff Login:** Use credentials to log in, view shift, and submit attendance.
+- **Manager Login:** Access the dashboard to manage staff and view attendance records.
+
+## Folder Structure
+
+```
+attendance-management-system/
+├── frontend/
+│   ├── src/
+│   └── angular.json
+└── README.md
+```
+
+## API Endpoints
+
+- `GET /roster` - Fetch all staff data.
+- `POST /roster` - Add new staff.
+- `PUT /roster/:id` - Update staff details.
+- `DELETE /roster/:id` - Delete staff and related attendance records.
+- `GET /attendance` - Fetch attendance records.
+- `POST /attendance` - Submit attendance.
+
+
+**Developed with ❤️ using Angular.**

@@ -1,0 +1,66 @@
+.staff-portal-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  .header {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .staff-details p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .webcam-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .capture-btn, .submit-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .capture-btn:hover, .submit-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .preview-container {
+    text-align: center;
+  }
+
+  .preview-image {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .staff-portal-container {
+      padding: 10px;
+    }
+
+    .capture-btn, .submit-btn {
+      width: 100%;
+    }
+  }

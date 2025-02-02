@@ -1,0 +1,21 @@
+<div class="staff-portal-container">
+  <header class="header">
+    <h2>Staff Portal</h2>
+  </header>
+
+  <section class="staff-details">
+    <p><strong>Name:</strong> {{staffDetails?.name}}</p>
+    <p><strong>Your Shift:</strong> {{staffDetails?.shift}}</p>
+  </section>
+
+  <div class="webcam-container">
+    <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+    <button class="capture-btn" (click)="triggerSnapshot()">Capture Attendance</button>
+  </div>
+
+  <div *ngIf="webcamImage" class="preview-container">
+    <h3>Preview:</h3>
+    <img [src]="webcamImage.imageAsDataUrl" alt="Attendance Preview" class="preview-image">
+    <button class="submit-btn" (click)="submitAttendance()">Submit Attendance</button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+  <section class="manager-dashboard">
+    <h2>Manager Dashboard</h2>
+
+    <div class="add-staff">
+      <h3>Add Staff</h3>
+      <input type="text" [(ngModel)]="newStaff.name" placeholder="Name">
+      <input type="text" [(ngModel)]="newStaff.shift" placeholder="Shift">
+      <button (click)="addStaff()">Add Staff</button>
+    </div>
+
+    <div class="roster">
+      <h3>Roster</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Shift</th>
+            <th>Timestamp</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let staff of roster">
+            <td>
+              <img [src]="getAttendancePhoto(staff.id)" alt="Staff Photo" class="staff-photo" *ngIf="getAttendancePhoto(staff.id); else noPhoto">
+              <ng-template #noPhoto>No Photo</ng-template>
+            </td>
+            <td>{{ staff.name }}</td>
+            <td>{{ staff.shift }}</td>
+            <td>{{ getAttendanceTimestamp(staff.id) }}</td>
+            <td>{{ getAttendanceStatus(staff.id) }}</td>
+            <td>
+              <button (click)="edit(staff)">Edit</button>
+              <button (click)="deleteStaff(staff.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div *ngIf="editStaff" class="add-staff">
+        <h3>Edit Staff</h3>
+        <input type="text" [(ngModel)]="editStaff.name">
+        <input type="text" [(ngModel)]="editStaff.shift">
+        <button (click)="saveEdit()">Save</button>
+      </div>
+    </div>
+  </section>
+</div>

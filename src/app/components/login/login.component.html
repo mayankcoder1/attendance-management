@@ -1,0 +1,14 @@
+<div class="login-container">
+<h1>Login</h1>
+<form>
+  <div class="row">
+    <label for="Username">Username</label>
+    <input type="text" [(ngModel)]="username" name="Username" autocomplete="off" placeholder="Your Username">
+  </div>
+  <div class="row">
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="password" name="password" placeholder="password">
+  </div>
+  <button type="submit" (click)="login()">Login</button>
+</form>
+</div>
