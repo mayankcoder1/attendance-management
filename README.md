@@ -7,6 +7,29 @@ The **Attendance Management System** is a web application designed to streamline
 ## Features
 
 - **User Authentication:** Unique credentials for staff and managers.
+"users": [
+    {
+      "userId": "1",
+      "username": "manager1",
+      "password": "admin123",
+      "role": "manager",
+      "id": "142c"
+    },
+    {
+      "userId": "2",
+      "username": "staff1",
+      "password": "staff123",
+      "role": "staff",
+      "id": "e73f"
+    },
+    {
+      "userId": "3",
+      "username": "staff2",
+      "password": "staff456",
+      "role": "staff",
+      "id": "8e1f"
+    }
+  ]
 - **Staff Portal:**
   - View personal name and shift details.
   - Capture photo for attendance using the webcam.
