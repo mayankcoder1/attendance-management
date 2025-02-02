@@ -41,7 +41,7 @@ The **Attendance Management System** is a web application designed to streamline
 
 ## Technology Stack
 
-- **Frontend:** Angular 14
+- **Frontend:** Angular 17
 
 ## Installation and Setup
 
